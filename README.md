@@ -25,7 +25,7 @@ Follow these steps to get Juadah up and running locally.
 
 ### Prerequisites
 
-Make sure you have **Node.js** and **npm** (or **yarn**) installed on your system.
+Make sure you have **Node.js** and **npm** (or **yarn** / **pnpm**) installed on your system.
 
 ### Installation
 
