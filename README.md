@@ -2,7 +2,7 @@
 # 🎉 Welcome to the Juadah Project
 
 
-## 🧁 Juadah: Modern Cake Shop
+## 🧁 Juadah: Online Cake Shop
 
 Juadah is a modern web application designed to serve as an online cake shop. Currently focused on a single store, we plan to expand Juadah into a full-fledged e-commerce platform that can support multiple cake shops in the future.
 
