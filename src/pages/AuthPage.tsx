@@ -19,14 +19,14 @@ function AuthPage() {
                     backgroundPosition: 'left bottom',
                     backgroundRepeat: 'no-repeat',
                 }}
-                className='w-full xl:w-[50%] h-[218px] md:h-screen '
+                className='w-full xl:w-[50%] h-[218px] md:h-[100vh] '
             >
                 <div id='logo' className='absolute  top-36 right-0 md:top-14 md:left-9'>
                     <Logo />
                 </div>
 
-                <div id='welcome-container' className=' px-6 md:mt-72 md:ml-32 2xl:mt-60  2xl:ml-60 bg-black bg-opacity-30 pt-6 pb-24 md:bg-opacity-0'>
-                    <p id='titleMain' className='text-3xl font-sans xl:text-7xl font-bold text-white md:text-[#1B6270]'>
+                <div id='welcome-container' className=' px-6 md:mt-64 md:ml-32 2xl:mt-60  2xl:ml-60 bg-black bg-opacity-30 pt-6 pb-24 md:bg-opacity-0'>
+                    <p id='titleMain' className='text-3xl font-sans lg:text-5xl xl:text-7xl font-bold text-white md:text-[#1B6270]'>
                         Welcome to <br />Juadah !
                     </p>
                     <p id='title-detail' className='text-xs xl:text-sm mt-6 font-semibold text-white md:text-[#1B6270] font-poppins tracking-widest'>
@@ -38,11 +38,11 @@ function AuthPage() {
             <div id="form"
                 className='bg-white w-full xl:w-[50%] md:rounded-none md:h-screen rounded-t-3xl z-10 md:mt-0 p-10 flex justify-center  md:rounded-l-[90px] flex-col'>
                 {switchPage ? 
-                <div className='w-full flex justify-center items-center'>
+                <div>
                     <Register /> 
                 </div>
                 : 
-                <div className='w-full flex justify-center items-center'>
+                <div>
                     <Login />
                 </div>
                 }
@@ -54,7 +54,7 @@ function AuthPage() {
                         className='text-[#DD9BA3] font-bold cursor-pointer'
                         onClick={() => setSwitchPage(!switchPage)}
                     >
-                        {switchPage ? 'Login' : 'Register'}
+                        {switchPage ? 'Sign In' : 'Sign Up'}
                     </span>
                 </p>
             </div>
