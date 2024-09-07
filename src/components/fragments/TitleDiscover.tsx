@@ -1,8 +1,8 @@
 import Button from "../widgets/Button"
 
-function TitleDiscover() {
+const TitleDiscover =() => {
   return (
-    <div className="">
+    <div className="flex justify-between w-full">
         <div className="max-w-[600px]  ">
             <div className="text-8xl font-bold text-[#1B6270]">
                 Bibendum et sit aliquam!
@@ -15,6 +15,7 @@ function TitleDiscover() {
                 <Button name="Discover Menu" />
             </div>
         </div>
+        <img src="https://via.placeholder.com/372x372"  alt="" className="rounded-3xl"/>
     </div>
   )
 }
