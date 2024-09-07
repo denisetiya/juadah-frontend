@@ -15,7 +15,8 @@ Juadah is a modern web application designed to serve as an online cake shop. Cur
 
 ## 📸 Preview
 
-![Juadah Screenshot](https://drive.google.com/file/d/1wdYQ8MWc07e03CrPtVf2P6lwFkFlUh8X/view?usp=sharing)
+![Juadah Screenshot](https://drive.google.com/uc?export=view&id=1wdYQ8MWc07e03CrPtVf2P6lwFkFlUh8X)
+
 
 
 ## 📦 Getting Started
