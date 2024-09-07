@@ -1,0 +1,25 @@
+import React, { useState } from "react"
+
+export default function FormElementsInputRoundedBaseTrailingIcon() {
+  const [state, setState] = useState({
+    "id-b13": "123456",
+  })
+
+  const [showPassword, setShowPassword] = useState(false)
+
+  const handleChange = evt => {
+    const value = evt.target.value
+    setState({
+      ...state,
+      [evt.target.name]: value,
+    })
+  }
+
+  return (
+    <>
+      {/*    <!-- Component: Rounded input with trailing icon --> */}
+
+      {/*    <!-- End Rounded input with trailing icon --> */}
+    </>
+  )
+}
