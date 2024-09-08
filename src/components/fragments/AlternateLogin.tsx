@@ -12,15 +12,15 @@ function AlternateLogin() {
       </p>
 
       <div className="flex gap-4 justify-center my-4">
-        <div className="rounded-full shadow-lg p-4 border">
+        <div className="rounded-full transition-shadow duration-300 shadow-lg p-4 border hover:shadow-[#f3bfc5]">
           <img src={GoogleIcon} alt="" />
         </div>
 
-        <div className="rounded-full shadow-lg p-4 border">
+        <div className="rounded-full shadow-lg p-4 border transition-shadow duration-300 hover:shadow-[#f3bfc5]">
           <img src={AppleIcon} alt="" />
         </div>
 
-        <div className="rounded-full shadow-lg p-4 px-6 border">
+        <div className="rounded-full shadow-lg p-4 px-6 border transition-shadow duration-300 hover:shadow-[#f3bfc5]">
           <img src={FacebookIcon} alt="" />
         </div>
         

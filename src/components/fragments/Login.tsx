@@ -34,8 +34,8 @@ const Login: React.FC = () => {
                         <PasswordInput id="password" />
                         <p className="text-xs text-slate-500 text-end">Forgot password ?</p>
                     </div>
-
-                    <div onClick={handleLogin} className="px-1 w-full md:w-96">
+                    {/* color="#DD9BA3", hover='f3bfc5' */}
+                    <div onClick={handleLogin} className="px-1 w-full md:w-96 bg-[#DD9BA3] hover:bg-[#f3bfc5] rounded-full">
                         <Button name="Sing In" />
                     </div>
                     

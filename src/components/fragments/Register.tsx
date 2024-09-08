@@ -60,7 +60,7 @@ const Register: React.FC = () => {
             </p>
           </div>
 
-          <div className="px-1 w-full md:w-96">
+          <div className="px-1 w-full md:w-96 bg-[#DD9BA3] hover:bg-[#f3bfc5] rounded-full">
             <Button name="Sign Up" />
           </div>
 

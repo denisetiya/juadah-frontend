@@ -1,6 +1,9 @@
 import TitleDiscover from "../components/fragments/TitleDiscover"
 import SwipePreview from "../components/fragments/SwipePreview"
 import PopularCake from "../components/fragments/PopularCake"
+import VideoPreview from "../components/fragments/VideoPreview"
+import SwipeTestimonial from "../components/fragments/SwipeTestimonial"
+
 function Home() {
   return (
     <div className="font-bold flex flex-col h-full items-center">
@@ -13,6 +16,14 @@ function Home() {
 
       <div>
         <PopularCake />
+      </div>
+
+      <div>
+        <VideoPreview />
+      </div>
+
+      <div>
+        <SwipeTestimonial />
       </div>
     </div>
   )
