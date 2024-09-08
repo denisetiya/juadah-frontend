@@ -44,8 +44,10 @@ const CardTestimonial: React.FC<CardTestimonialProps> = ({ url, desc, name, emai
 
 const CardExclusive: React.FC<CardProps> = ({ url, title, desc, price }) => {
   return (
-    <div className="flex flex-col border rounded-3xl shadow-xl pb-8">
-      <img src={url} alt="" className="rounded-t-3xl" />
+    <div className="max-w-[290px] md:max-w-[372px] flex flex-col border rounded-3xl shadow-xl pb-8">
+      <div className="max-w-[290px] md:max-w-[372px]">
+        <img src={url} alt="" className="rounded-t-3xl" />
+      </div>
       <div className="flex justify-between items-center px-4 py-8">
         <div>
           <div className="text-poppins font-semibold ">{title}</div>

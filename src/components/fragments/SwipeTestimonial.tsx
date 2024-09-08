@@ -22,13 +22,27 @@ const SwipeTestimonial = () => {
                 Testimonials
             </div>
 
-            <div className='text-4xl font-bold mb-10'>
+            <div className='text-2xl text-wrap md:text-4xl font-bold mb-10'>
                 What’s our customer says?
             </div>
             <Swiper
                 modules={[Pagination, Navigation, Autoplay]}
                 spaceBetween={20}  // Add space between slides
-                slidesPerView={3}
+                breakpoints={{
+                    // Define different settings for different screen sizes
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                }}
                 grabCursor={true}
                 pagination={{
                     dynamicBullets: true,
@@ -42,11 +56,11 @@ const SwipeTestimonial = () => {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 }}
-                className='max-w-screen-lg h-96 px-10'
+                className='max-w-screen-xl h-[27rem] px-10 pb-10'
             >
                 {testimonial.map((slide, index) => (
                     <SwiperSlide key={index} className='flex justify-center'>
-                        <div className='p-6'>
+                        <div className='p-6 pb-4'>
                             <CardTestimonial
                                 desc={slide.description}
                                 name={slide.name}
