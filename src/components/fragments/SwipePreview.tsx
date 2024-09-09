@@ -43,7 +43,7 @@ const SwipePreview = () => {
         >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                    <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-40 items-center w-full h-full px-4 md:px-52">
+                    <div className="flex flex-col lg:flex-row justify-center gap-10 md:gap-40 items-center w-full h-full px-4 md:px-52">
                         <div className=''>
                             <img src={slide.image} alt="Placeholder" className="rounded-3xl max-w-[400px] md:max-w-[372px]" />
                         </div>
