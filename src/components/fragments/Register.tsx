@@ -4,6 +4,7 @@ import PasswordInput from "../widgets/PasswordInput";
 import Button from "../widgets/Button";
 import AlternateLogin from "./AlternateLogin";
 import { validatePasswordStrength } from "../../utils/passwordValidation"
+import { motion } from "framer-motion";
 
 const Register: React.FC = () => {
   const [password, setPassword] = useState<string>("");
@@ -40,31 +41,59 @@ const Register: React.FC = () => {
 
       <div id="form-container">
         <form className="w-full" onSubmit={handleSubmit}>
-          <div className="w-full px-1 md:w-96 my-6">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            
+          className="w-full px-1 md:w-96 my-6">
             <Input id="name" type="text" placeholder="Type your Full Name" />
-          </div>
-          <div className="w-full px-1 md:w-96 my-6">
-            <Input id="email" type="email" placeholder="Type your email" />
-          </div>
+          </motion.div>
 
-          <div className="px-1 w-full md:w-96 my-6 flex gap-2 flex-col">
+          <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full px-1 md:w-96 my-6">
+            <Input id="email" type="email" placeholder="Type your email" />
+          </motion.div>
+
+          <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+          className="px-1 w-full md:w-96 my-6 flex gap-2 flex-col">
             <PasswordInput id="password" onChange={handlePasswordChange} />
             <p className={`text-xs ${validationMessageColor}`}>{validationMessage}</p>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-2 my-8 items-start">
+          <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 , delay: 0.5 }}
+          className="flex gap-2 my-8 items-start">
             <input type="checkbox" />
             <p className="font-poppins text-xs text-slate-500 text-wrap max-w-96">
               By creating an account means you agree to 
               <b> the Terms and Conditions</b>, and our <b>Privacy Policy</b>
             </p>
-          </div>
+          </motion.div>
 
-          <div className="px-1 w-full md:w-96 bg-[#DD9BA3] hover:bg-[#f3bfc5] rounded-full">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 , delay: 0.6 }}          
+          className="px-1 w-full md:w-96 bg-[#DD9BA3] hover:bg-[#f3bfc5] rounded-full">
             <Button name="Sign Up" />
-          </div>
+          </motion.div>
 
-          <AlternateLogin />
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}          
+          >
+            <AlternateLogin />
+          </motion.div>
         </form>
       </div>
     </div>

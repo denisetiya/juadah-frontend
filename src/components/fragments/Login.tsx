@@ -4,6 +4,7 @@ import PasswordInput from '../widgets/PasswordInput';
 import Button from "../widgets/Button";
 import { useNavigate } from "react-router-dom";
 import AlternateLogin from "./AlternateLogin";
+import { motion } from "framer-motion";
 
 const Login: React.FC = () => {
 
@@ -26,20 +27,38 @@ const Login: React.FC = () => {
 
             <div id="form-container">
                 <form className="w-full">
-                    <div className="w-full px-1 md:w-96 my-6">
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                    className="w-full px-1 md:w-96 my-6">
                         <Input id="email" type="email" placeholder="Type your email"/>
-                    </div>
+                    </motion.div>
 
-                    <div className="px-1 w-full md:w-96 my-6 flex gap-2 flex-col">
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}                    
+                    className="px-1 w-full md:w-96 my-6 flex gap-2 flex-col">
                         <PasswordInput id="password" />
                         <p className="text-xs text-slate-500 text-end">Forgot password ?</p>
-                    </div>
+                    </motion.div>
                     {/* color="#DD9BA3", hover='f3bfc5' */}
-                    <div onClick={handleLogin} className="px-1 w-full md:w-96 bg-[#DD9BA3] hover:bg-[#f3bfc5] rounded-full">
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}  
+                        onClick={handleLogin} className="px-1 w-full md:w-96 bg-[#DD9BA3] hover:bg-[#f3bfc5] rounded-full">
                         <Button name="Sing In" />
-                    </div>
+                    </motion.div>
                     
-                    <AlternateLogin/>
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 , delay: 0.5 }}
+                    >
+                        <AlternateLogin/>
+                    </motion.div>
                 </form>
             </div>
 
