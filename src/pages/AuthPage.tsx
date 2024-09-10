@@ -16,6 +16,9 @@ function AuthPage() {
       <motion.div
         id="imageBg"
         layout
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
         style={{
           backgroundImage: `url(${backgroundAuth})`,
           backgroundPosition: 'left bottom',
@@ -25,30 +28,39 @@ function AuthPage() {
           switchPage ? 'md:order-2' : 'md:order-1'
         } border-0 w-full xl:w-[50%] h-[218px] relative md:h-[100vh] flex`}
       >
-        <div
+        <motion.div
+            initial={{ opacity: 0, x:-100 }}
+            animate={{ opacity: 1 , x:0}}
+            transition={{ duration: 0.5 }}
           id="logo"
           className="absolute top-36 right-0 md:top-14 md:left-9"
         >
           <Logo />
-        </div>
+        </motion.div>
 
         <div
           id="welcome-container"
-          className="px-6 md:mt-64 md:ml-32 2xl:mt-60 2xl:ml-60 bg-black bg-opacity-30 pt-6 pb-24 md:bg-opacity-0 w-full"
+          className="px-6 md:mt-52 md:ml-32 2xl:mt-56 2xl:ml-36 bg-black bg-opacity-30 pt-6 pb-24 md:bg-opacity-0 w-full"
         >
-          <p
+          <motion.p
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             id="titleMain"
             className="text-3xl font-sans lg:text-5xl xl:text-7xl font-bold text-white md:text-[#1B6270]"
           >
             Welcome to <br />
             Juadah!
-          </p>
-          <p
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             id="title-detail"
             className="text-xs xl:text-sm mt-6 font-semibold text-white md:text-[#1B6270] font-poppins tracking-widest"
           >
             Beli kue jadi lebih mudah dengan aplikasi Juadah
-          </p>
+          </motion.p>
         </div>
       </motion.div>
 
@@ -89,7 +101,7 @@ function AuthPage() {
         <motion.p
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}        
+        transition={{ duration: 0.5 , delay: 0.3, ease: 'easeIn' }}        
         className="text-center md:my-12 text-xs md:text-sm text-poppins transition-all duration-300">
           {switchPage ? 'Already have an account? ' : "Don't have an account? "}
           <span
