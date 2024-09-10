@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import AuthPage from "./pages/AuthPage"
 import Navbar from './components/fragments/Navbar.tsx'
 import Footer from "./components/fragments/Footer.tsx"
+import DiscoverPage from "./pages/DiscoverPage.tsx"
 function App() {
 
   const location = useLocation();
@@ -12,9 +13,10 @@ function App() {
   return (
     <div>
       {showNavbar && <Navbar />}
-      <Routes>
+      <Routes >
         <Route path="/" Component={Home} />
         <Route path="/auth" Component={AuthPage} />
+        <Route path="/discover" Component={DiscoverPage} />
       </Routes>
       {showNavbar && <Footer />}
     </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Logo from "../widgets/Logo";
+import { Link } from "react-router-dom";
 import { ShoppingCart, User } from "@phosphor-icons/react";
 
 export default function Navbar() {
@@ -65,14 +66,14 @@ export default function Navbar() {
                         >
                             {menuItems.map((item, index) => (
                                 <li key={index} role="none" className="flex items-stretch">
-                                    <a
+                                    <Link
                                         role="menuitem"
                                         aria-haspopup="false"
                                         className="flex text-white items-center gap-2 py-4 transition-colors duration-300 hover:text-slate-200 focus:text-slate-200 focus:outline-none focus-visible:outline-none lg:px-8"
-                                        href={item.link}
+                                        to={item.link}
                                     >
                                         <span>{item.title}</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

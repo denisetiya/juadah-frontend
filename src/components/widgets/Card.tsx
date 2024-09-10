@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "../widgets/Button"
 import { User } from "@phosphor-icons/react"
+import { ShoppingCart, Star } from "@phosphor-icons/react"
 
 interface CardProps {
   url: string | undefined
@@ -16,6 +17,13 @@ interface CardTestimonialProps {
   email: string | undefined
 }
 
+interface CardProductProps {
+  url: string | undefined
+  title: string | undefined
+  star: number
+  userRev: number
+  price: string | undefined
+}
 
 const CardTestimonial: React.FC<CardTestimonialProps> = ({ url, desc, name, email }) => {
   return (
@@ -66,7 +74,43 @@ const CardExclusive: React.FC<CardProps> = ({ url, title, desc, price }) => {
   )
 }
 
+
+
+const CardProduct: React.FC<CardProductProps> = ({ url, title, star,userRev, price }) => {
+  return (
+    <div className="max-w-[290px] md:max-w-[372px] flex flex-col border rounded-3xl shadow-xl pb-8">
+      <div className="max-w-[290px] md:max-w-[372px]">
+        <img src={url} alt="" className="rounded-t-3xl" />
+      </div>
+      <div className="flex flex-col justify-between px-4 py-2">
+        <div>
+          <div className="text-poppins font-semibold mt-3">{title}</div>
+          <div className="mt-2 text-xl font-bold">{price}</div>
+        </div>
+
+          <div className="flex justify-between items-end">
+            <div className="text-slate-500 text-sm font-light">
+            <div className="flex space-x-1 text-slate-500 text-sm font-light">
+              {Array.from({ length: star }).map((_, index) => (
+                <Star weight="fill" key={index} size={16} className="text-black" />
+              ))} <small>({userRev})</small>
+            </div>
+            </div>
+            <div className="bg-black rounded-full p-2">
+              <ShoppingCart size={25} className="text-white" />
+            </div>
+          </div>
+      </div>
+      {/* color="#1B6270" hover="#1d7283"  */}
+
+    </div>
+  )
+}
+
+
+
 export {
   CardTestimonial,
-  CardExclusive
+  CardExclusive,
+  CardProduct
 }
