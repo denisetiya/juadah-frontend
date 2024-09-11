@@ -84,7 +84,7 @@ const CardProduct: React.FC<CardProductProps> = ({ url, title, star,userRev, pri
       </div>
       <div className="flex flex-col justify-between px-4 py-2">
         <div>
-          <div className="text-poppins font-semibold mt-3">{title}</div>
+          <div className="font-semibold font-poppins mt-3">{title}</div>
           <div className="mt-2 text-xl font-bold">{price}</div>
         </div>
 
