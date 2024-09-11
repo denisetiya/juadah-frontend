@@ -78,9 +78,9 @@ const CardExclusive: React.FC<CardProps> = ({ url, title, desc, price }) => {
 
 const CardProduct: React.FC<CardProductProps> = ({ url, title, star,userRev, price }) => {
   return (
-    <div className="max-w-[290px] md:max-w-[372px] flex flex-col border rounded-3xl shadow-xl pb-8">
+    <div className="max-w-[200px] md:max-w-[255px] flex flex-col border rounded-xl border-slate-300 pb-8 shadow-xl">
       <div className="max-w-[290px] md:max-w-[372px]">
-        <img src={url} alt="" className="rounded-t-3xl" />
+        <img src={url} alt="" className="rounded-t-xl" />
       </div>
       <div className="flex flex-col justify-between px-4 py-2">
         <div>
@@ -92,12 +92,12 @@ const CardProduct: React.FC<CardProductProps> = ({ url, title, star,userRev, pri
             <div className="text-slate-500 text-sm font-light">
             <div className="flex space-x-1 text-slate-500 text-sm font-light">
               {Array.from({ length: star }).map((_, index) => (
-                <Star weight="fill" key={index} size={16} className="text-black" />
+                <Star weight="fill" key={index} className="text-black text-xs md:text-xl" />
               ))} <small>({userRev})</small>
             </div>
             </div>
-            <div className="bg-black rounded-full p-2">
-              <ShoppingCart size={25} className="text-white" />
+            <div className="bg-black rounded-full p-2 ml-1 hover:scale-150 transition-transform duration-300 cursor-pointer">
+              <ShoppingCart  className="text-white text-sm md:text-xl" />
             </div>
           </div>
       </div>

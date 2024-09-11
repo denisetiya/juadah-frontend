@@ -60,16 +60,16 @@ const PopularCake = () => {
           spaceBetween={20}
           breakpoints={{
             320: {
-              slidesPerView: 1,
+              slidesPerView: 2,
             },
             640: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             768: {
               slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
           }}
           centeredSlides={true}

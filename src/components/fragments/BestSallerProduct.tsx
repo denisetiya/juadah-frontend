@@ -72,13 +72,13 @@ function BestSallerProduct() {
 
                 <Swiper
                     modules={[Navigation, Autoplay]}
-                    spaceBetween={30}
+                    spaceBetween={10}
                     breakpoints={{
                         320: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                         },
                         640: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                         },
                         768: {
                             slidesPerView: 3,
@@ -98,19 +98,19 @@ function BestSallerProduct() {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     }}
-                    className='max-w-screen-lg pt-16 pb-10  mx-auto'
+                    className='max-w-screen-lg pt-16 pb-10 '
                 >
                     {product.map((item, index) => (
-                        <SwiperSlide key={index} className="flex justify-center">
+                        <SwiperSlide key={index} className="">
                             <CardProduct key={item.title} {...item} />
                         </SwiperSlide>
                     ))}
 
 
-                    <div className="text-start font-poppins text-2xl font-bold top-0 left-0 absolute">
-                        Best Sellers
+                    <div className="text-start font-poppins text-xl md:text-2xl font-bold top-0  w-full md:w-auto md:left-0 absolute">
+                        Best Saller Products
                     </div>
-                    <div className="absolute flex gap-2 top-4 right-9">
+                    <div className="absolute flex gap-2 bottom-3 right-9">
                         <ArrowCircleRight size={60} className='swiper-button-prev   text-slate-400' />
                         <ArrowCircleLeft size={60} className='swiper-button-next  text-slate-400' />
                     </div>

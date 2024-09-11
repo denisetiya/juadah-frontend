@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-function RecommendedProduct() {
+function RecomendedProduct() {
 
     const product = [{
         url: "https://via.placeholder.com/255x188",
@@ -72,13 +72,13 @@ function RecommendedProduct() {
 
                 <Swiper
                     modules={[Navigation, Autoplay]}
-                    spaceBetween={30}
+                    spaceBetween={10}
                     breakpoints={{
                         320: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                         },
                         640: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                         },
                         768: {
                             slidesPerView: 3,
@@ -98,19 +98,19 @@ function RecommendedProduct() {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     }}
-                    className='max-w-screen-lg pt-16 pb-10  mx-auto'
+                    className='max-w-screen-lg pt-16 pb-10 '
                 >
                     {product.map((item, index) => (
-                        <SwiperSlide key={index} className="flex justify-center">
+                        <SwiperSlide key={index} className="">
                             <CardProduct key={item.title} {...item} />
                         </SwiperSlide>
                     ))}
 
 
-                    <div className="text-start font-poppins text-2xl font-bold top-0 left-0 absolute">
-                        Recommended Product
+                    <div className="text-start font-poppins text-xl md:text-2xl font-bold top-0  w-full md:w-auto md:left-0 absolute">
+                        Recommended Products
                     </div>
-                    <div className="absolute flex gap-2 top-4 right-9">
+                    <div className="absolute flex gap-2 bottom-3 right-9">
                         <ArrowCircleRight size={60} className='swiper-button-prev   text-slate-400' />
                         <ArrowCircleLeft size={60} className='swiper-button-next  text-slate-400' />
                     </div>
@@ -125,4 +125,4 @@ function RecommendedProduct() {
     )
 }
 
-export default RecommendedProduct
+export default RecomendedProduct
