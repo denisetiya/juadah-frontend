@@ -96,7 +96,12 @@ Contributions are what make the open-source community such an amazing place to l
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a Pull Reques
+
+## 🔧 Recommended extension
+
+1. [Tailwind fold](https://marketplace.visualstudio.com/items?itemName=stivo.tailwind-fold) 
+2. [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind) 
 
 ## 📄 License
 
