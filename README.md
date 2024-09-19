@@ -32,7 +32,7 @@ Make sure you have **Node.js** and **npm** (or **yarn** / **pnpm**) installed on
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/yourusername/juadah.git
+    git clone https://github.com/denisetiya/juadah-frontend.git
     cd juadah
     ```
 
