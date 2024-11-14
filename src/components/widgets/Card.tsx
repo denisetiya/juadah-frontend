@@ -78,7 +78,7 @@ const CardExclusive: React.FC<CardProps> = ({ url, title, desc, price }) => {
 
 const CardProduct: React.FC<CardProductProps> = ({ url, title, star,userRev, price }) => {
   return (
-    <div className="max-w-[200px] md:max-w-[255px] flex flex-col border rounded-xl border-slate-300 pb-8 shadow-xl">
+    <div className="max-w-[200px] md:max-w-[255px] flex flex-col border rounded-xl border-slate-300 pb-8 shadow-lg">
       <div className="max-w-[290px] md:max-w-[372px]">
         <img src={url} alt="" className="rounded-t-xl" />
       </div>
@@ -93,10 +93,10 @@ const CardProduct: React.FC<CardProductProps> = ({ url, title, star,userRev, pri
             <div className="flex space-x-1 text-slate-500 text-sm font-light">
               {Array.from({ length: star }).map((_, index) => (
                 <Star weight="fill" key={index} className="text-black text-xs md:text-xl" />
-              ))} <small>({userRev})</small>
+              ))} <small className="text-[8px] md:text-xs ">({userRev})</small>
             </div>
             </div>
-            <div className="bg-black rounded-full p-2 ml-1 hover:scale-150 transition-transform duration-300 cursor-pointer">
+            <div className="bg-black rounded-full p-2 ml-1 hover:scale-110 transition-transform duration-300 cursor-pointer">
               <ShoppingCart  className="text-white text-sm md:text-xl" />
             </div>
           </div>
