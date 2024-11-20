@@ -74,11 +74,11 @@ export default function Navbar() {
               </div>
             </button>
 
-            {/* Menu list */}
+            {/* menu list */}
             <ul
               role="menubar"
               aria-label="Select page"
-              className={`absolute left-0 top-0 z-10 w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-[#DD9BA3] px-8 pb-12 pt-24 font-medium transition-all duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 ${
+              className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-[#DD9BA3] px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 ${
                 isToggleOpen
                   ? "visible opacity-100 backdrop-blur-sm"
                   : "invisible opacity-0"
@@ -101,7 +101,7 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* Sub menu */}
+            {/* sub menu */}
             <div className="flex items-center justify-end gap-3 px-6 ml-auto lg:ml-0 lg:flex-1 lg:p-0">
               <div>
                 <ShoppingCart size={25} className="text-white" />
