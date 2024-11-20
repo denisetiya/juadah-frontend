@@ -4,16 +4,18 @@ import AuthPage from "./pages/AuthPage"
 import Navbar from './components/fragments/Navbar.tsx'
 import Footer from "./components/fragments/Footer.tsx"
 import DiscoverPage from "./pages/DiscoverPage.tsx"
-function App() {
 
+
+function App() {
   const location = useLocation();
   const noNavbarPaths = ['/auth'];
   const showNavbar = !noNavbarPaths.includes(location.pathname);
 
+
   return (
     <div>
       {showNavbar && <Navbar />}
-      <Routes >
+      <Routes>
         <Route path="/" Component={Home} />
         <Route path="/auth" Component={AuthPage} />
         <Route path="/discover" Component={DiscoverPage} />
@@ -24,3 +26,4 @@ function App() {
 }
 
 export default App
+

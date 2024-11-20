@@ -22,8 +22,8 @@ function DiscoverBar() {
         </div>
 
         <div className="flex gap-2 ">
-            <div className="w-96">
-            <input type="search" placeholder="Search for anything" className="w-full py-1 bg-[#F7F7F7] px-4 rounded-2xl bg-transparent focus:outline-[#f5bbc1]"/>
+            <div className="md:w-96">
+            <input type="search" placeholder="Search for anything" className="w-full py-1 bg-[#F7F7F7] px-4 transition-all focus:rounded-3xl duration-200 hover:rounded-2xl bg-transparent focus:outline-[#f5bbc1] border-b-2"/>
             </div>
 
             <div className="bg-black rounded-md cursor-pointer">

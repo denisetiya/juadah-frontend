@@ -49,10 +49,10 @@ const cardData = [
 
 const PopularCake = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center">
+    <div className="flex flex-col justify-center w-full h-screen">
       <div className="flex flex-col items-center my-5 md:my-10">
-        <div className="text-lg md:text-2xl font-light text-gray-700">Most Popular</div>
-        <div className="text-xl md:text-4xl mt-2 md:my-5 font-semibold text-gray-900">Our Exclusive Cakes</div>
+        <div className="text-lg font-light text-gray-700 md:text-2xl">Most Popular</div>
+        <div className="mt-2 text-xl font-semibold text-gray-900 md:text-4xl md:my-5">Our Exclusive Cakes</div>
       </div>
       <div className="relative">
         <Swiper
@@ -69,7 +69,7 @@ const PopularCake = () => {
               slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           centeredSlides={true}
@@ -83,7 +83,7 @@ const PopularCake = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          className='max-w-screen-lg pt-8 pb-10  mx-auto'
+          className='max-w-screen-lg pt-8 pb-10 mx-auto'
         >
           {cardData.map((item, index) => (
             <SwiperSlide key={index} className="flex justify-center">
@@ -98,8 +98,8 @@ const PopularCake = () => {
 
 
           <div className="absolute flex gap-2 top-4 right-9">
-            <ArrowCircleRight size={60} className='swiper-button-prev   text-slate-400' />
-            <ArrowCircleLeft size={60} className='swiper-button-next  text-slate-400' />
+            <ArrowCircleRight size={60} className='swiper-button-prev text-slate-400' />
+            <ArrowCircleLeft size={60} className='swiper-button-next text-slate-400' />
           </div>
 
         </Swiper>
