@@ -3,7 +3,7 @@ import Logo from "../widgets/Logo";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { ShoppingCart, User } from "@phosphor-icons/react";
-
+import Cookies from 'js-cookie';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,7 +26,9 @@ export default function Navbar() {
   ];
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    Cookies.remove("email");
+    Cookies.remove("name");
+    Cookies.remove("role");
     navigate("/auth");
   };
 
@@ -43,7 +45,7 @@ export default function Navbar() {
               <Logo />
             </div>
 
-            <div className="border-l-2 border-white my-6 hidden md:block"></div>
+            <div className="hidden my-6 border-l-2 border-white md:block"></div>
 
             {/* Mobile */}
             <button
@@ -56,7 +58,7 @@ export default function Navbar() {
               aria-expanded={isToggleOpen ? "true" : "false"}
               aria-label="Toggle navigation"
             >
-              <div className="absolute left-1/2 top-1/2 w-6 -translate-x-1/2 -translate-y-1/2 transform">
+              <div className="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
                 <span
                   aria-hidden="true"
                   className="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-200 transition-all duration-300"
@@ -100,25 +102,28 @@ export default function Navbar() {
             </ul>
 
             {/* sub menu */}
-            <div className="ml-auto flex items-center justify-end px-6 lg:ml-0 lg:flex-1 gap-3 lg:p-0">
+            <div className="flex items-center justify-end gap-3 px-6 ml-auto lg:ml-0 lg:flex-1 lg:p-0">
               <div>
                 <ShoppingCart size={25} className="text-white" />
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex items-center justify-center">
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="cursor-pointer border-none border-0 outline-none">
+                  <DropdownMenuTrigger className="border-0 border-none outline-none cursor-pointer">
                     <User
                       size={25}
                       className="text-white border-none outline-none"
                     />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuLabel>{Cookies.get("email") ? Cookies.get("name") : "Guest"}</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>Profile</DropdownMenuItem>
                     <DropdownMenuItem>Billing</DropdownMenuItem>
+                    {Cookies.get("role") === "ADMIN" && (
+                      <DropdownMenuItem>Dashboard</DropdownMenuItem>
+                    )}
                     <DropdownMenuItem onClick={() => handleLogout()}>
-                      Log out
+                      {Cookies.get("email") ? "Logout" : "Login"}
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
