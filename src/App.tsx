@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="w-screen">
       {showNavbar && <Navbar />}
       <Routes>
         <Route path="/" Component={Home} />
