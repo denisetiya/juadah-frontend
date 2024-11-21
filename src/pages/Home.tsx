@@ -1,8 +1,8 @@
 import TitleDiscover from "../components/fragments/TitleDiscover"
 import SwipePreview from "../components/fragments/SwipePreview"
-// import PopularCake from "../components/fragments/PopularCake"
+import PopularCake from "../components/fragments/PopularCake"
 import VideoPreview from "../components/fragments/VideoPreview"
-import SwipeTestimonial from "../components/fragments/SwipeTestimonial"
+// import SwipeTestimonial from "../components/fragments/SwipeTestimonial"
 
 function Home() {
   return (
@@ -13,18 +13,18 @@ function Home() {
       <div className="mx-4 mb-10 lg:mb-0 lg:mx-0">
         <SwipePreview />
       </div>
-
-      {/* <div className="">
+      
+      <div className="">
         <PopularCake />
-      </div> */}
+      </div>
 
       <div>
         <VideoPreview />
       </div>
 
-      <div>
+      {/* <div>
         <SwipeTestimonial />
-      </div>
+      </div> */}
     </div>
   )
 }
