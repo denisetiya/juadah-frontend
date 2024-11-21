@@ -1,9 +1,9 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
 import AuthPage from "./pages/AuthPage"
-import Navbar from './components/fragments/Navbar.tsx'
-import Footer from "./components/fragments/Footer.tsx"
-import DiscoverPage from "./pages/DiscoverPage.tsx"
+import Navbar from './components/fragments/Navbar'
+import Footer from "./components/fragments/Footer"
+import DiscoverPage from "./pages/DiscoverPage"
 
 
 function App() {
