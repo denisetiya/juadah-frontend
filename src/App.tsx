@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <div className="sm:max-w-screen-sm md:max-w-full">
+    <div className="">
       {showNavbar && <Navbar />}
       <Routes>
         <Route path="/" Component={Home} />

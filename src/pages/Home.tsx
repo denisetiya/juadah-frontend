@@ -1,6 +1,6 @@
 import TitleDiscover from "../components/fragments/TitleDiscover"
 import SwipePreview from "../components/fragments/SwipePreview"
-import PopularCake from "../components/fragments/PopularCake"
+// import PopularCake from "../components/fragments/PopularCake"
 import VideoPreview from "../components/fragments/VideoPreview"
 import SwipeTestimonial from "../components/fragments/SwipeTestimonial"
 
@@ -14,9 +14,9 @@ function Home() {
         <SwipePreview />
       </div>
 
-      <div className="">
+      {/* <div className="">
         <PopularCake />
-      </div>
+      </div> */}
 
       <div>
         <VideoPreview />
